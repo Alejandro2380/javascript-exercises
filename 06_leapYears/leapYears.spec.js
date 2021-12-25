@@ -1,22 +1,22 @@
 const leapYears = require('./leapYears')
 
-describe('leapYears', () => {
-  test('works with non century years', () => {
+describe('leapYears', function() {
+  test('works with non century years', function() {
     expect(leapYears(1996)).toBe(true);
   });
-  test.skip('works with non century years', () => {
+  test('works with non century years', function() {
     expect(leapYears(1997)).toBe(false);
   });
-  test.skip('works with ridiculously futuristic non century years', () => {
+  test('works with ridiculously futuristic non century years',function(){
     expect(leapYears(34992)).toBe(true);
   });
-  test.skip('works with century years', () => {
+  test('works with century years', function(){
     expect(leapYears(1900)).toBe(false);
   });
-  test.skip('works with century years', () => {
+  test('works with century years',function(){
     expect(leapYears(1600)).toBe(true);
   });
-  test.skip('works with century years', () => {
+  test('works with century years',function(){
     expect(leapYears(700)).toBe(false);
   });
 });
